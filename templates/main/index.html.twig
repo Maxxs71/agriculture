@@ -1,7 +1,92 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
-<div class="text-center">doizadhnohdioazhdoiazhdiouazdhza</div>
+
+    <header>
+        <div class="hero-section">
+            <!-- Row pour aligner les éléments au centre de la page -->
+            <div class="row">
+                <div data-aos="fade-left" data-aos-duration="1000" class="col-12 d-flex">
+                    <div class="since">- Depuis 19xx -</div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div data-aos="fade-left" data-aos-duration="1000" class="col-12 d-flex">
+                    <div class="horizontal1 m-4"></div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Titre h1 avec animation slide-down -->
+                    <h1 class="titlephoto mb-5 text-uppercase">ferme jean christophe gaestel</h1>
+                </div>
+            </div>
+            <!-- Nouvelle row pour aligner les boutons de réservation et de contact -->
+            <div class="row">
+                <div data-aos="fade-left" data-aos-duration="1000" class="col-12 d-flex">
+                    <div class="horizontal"></div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <hero>
+
+
+        <!-- Conteneur pour aligner le contenu au centre de la page -->
+        <div class="container rectangle ">
+            <!-- Row pour aligner le contenu au centre de la page -->
+            <div class=" ">
+                <!-- Colonne pour contenir le texte avec animation fade-left -->
+                <div data-aos="fade-left" data-aos-duration="1000" class="col-12 d-flex flex-wrap flex-lg-nowrap  mt-5 ">
+
+                    <img  src="{{ asset('images/agri.jpg') }}" style=" height: 450px" class="rounded-3" alt="">
+                </div>
+
+                    <div class="text">
+
+                        <div class="text col-12 col-lg-8  p-5 ">
+                            <div id="redline"></div>
+                            <p class="text2">
+
+                                In ultricies, nunc et ultricies ornare, lectus mauris vestibulum est, ut egestas lectus
+                                nisi eu velit. Integer lacus dolor, molestie ac cursus sit amet, condimentum in mauris.
+                                In eget diam eu odio tincidunt euismod. Vivamus porta at ipsum eget scelerisque.
+                                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                                Sed sed justo sit amet purus placerat auctor in nec metus. Morbi eu bibendum nulla.
+                                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                                Cras lobortis condimentum iaculis. Donec interdum porttitor neque eu ullamcorper. In at
+                                dolor vel tortor mollis vulputate convallis sit amet quam. Praesent quis lorem
+                                consectetur, pellentesque turpis ut, dictum purus. Aliquam aliquet erat suscipit nibh
+                                scelerisque tempus. Ut viverra sagittis efficitur. Fusce ut erat a tortor luctus
+                                malesuada.
+
+
+
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        </div>
+
+
+    </hero>
+
+    
+
+
+
 {% endblock %}

@@ -25,6 +25,11 @@
     <body>
     {# Inclusion du menu principal du site #}
     {% include 'partials/_main_navbar.html.twig' %}
+    {# Inclusion de JS bootstrap #}
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+
+    {# Inclusion du fichier script.js #}
+    <script src="{{ asset('js/script.js') }}"></script>
 
     {% block body %}{% endblock %}
     </body>

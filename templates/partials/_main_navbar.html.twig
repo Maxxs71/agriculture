@@ -1,104 +1,42 @@
-<!-- Création navbar responsive -->
-<!-- Barre de navigation responsive avec une disposition flexible pour justifier les éléments autour -->
-<nav class="navbar navbar-expand-lg  d-flex justify-content-around">
-    <!-- Conteneur fluide pour la barre de navigation -->
+
     <div class="container-fluid">
-        <a class="titrenavbar navbar-brand" href="">L'Auberge du Vieux Moulin**</a>
+        <nav class="navbar  navbar-expand-lg  fixed-top">
 
+            <a class="navbar-brand me-auto" href="#">Logo</a>
 
-        <!-- Bouton de déclenchement du menu déroulant -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- Icône du bouton, généralement représentée par trois lignes (hamburger) -->
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center  me-auto mb-2 mb-lg-0 flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Produits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">A propos de la ferme </a>
+                        </li>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <!-- Lien vers la page du restaurant avec des classes de style et un attribut de condition -->
-                <li class="nav-item ">
-                    <a
-                       href="">Restaurant</a>
-                </li>
-                <!-- Lien vers la page de l'hotel avec des classes de style et un attribut de condition -->
-                <li class="nav-item ">
+                    </ul>
+                </div>
+            </div>
+            <div class="icon m-2">
+                <a href=""><i class="fa-brands fa-square-facebook" style="color: #0a58ca"></i></a>
 
-                       href="">Hotel</a>
-                </li>
-                <!-- Lien vers la page d'accueil avec des classes de style et un attribut de condition -->
-                <li class="nav-item">
+            </div>
 
-                       href="">Accueil</a>
-                </li>
-                <!-- Lien vers la page de contact avec des classes de style et un attribut de condition -->
-                <li class="nav-item">
+            <a href="#" class="login-button mx-lg-2">Connexion</a>
 
-                       href="">
-                        Contact
-                    </a>
-                </li>
-                <!-- Lien vers la page a propos avec des classes de style et un attribut de condition -->
-                <li class="nav-item">
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                       href="">
-                        A propos
-                    </a>
-                </li>
+        </nav>
 
-
-
-                {% if app.user %}
-
-                    {# Menu déroulant #}
-                    <li class="nav-item dropdown">
-
-                        {# Texte du bouton du menu déroulant #}
-                        <a class="nav-link dropdown-toggle" href="#" id="profil-dropdown" role="button"
-                           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {# Affichage du pseudonyme de l'utilisateur connecté #} <i
-                                    class="fas fa-user mx-1 "></i>{{ app.user.firstname }} {{ app.user.lastname }}
-
-                        </a>
-
-                        {# Liste des liens du menu déroulant #}
-                        <div class="dropdown-menu" aria-labelledby="profil-dropdown">
-
-
-                            <!-- Vérification si l'utilisateur possède le rôle d'administrateur -->
-                            {% if is_granted('ROLE_ADMIN') %}
-
-                                <p class="text-center">Modifier/Supprimer</p>
-                                <!-- Lien vers la page des chambres avec une icône et du texte -->
-                                <p class="text-center"><a  href="{{ path('app_room_index') }}"><i class="fa-solid fa-bed me-1"></i>Chambres</a></p>
-                                <!-- Lien vers la page des dates avec une icône et du texte -->
-
-                                <p class="text-center"><a href="{{ path('app_date_index') }}"><i class="fa-regular fa-calendar-days me-1"></i>Date</a></p>
-                                <!-- Lien vers la page du menu grenouilles avec une icône et du texte -->
-
-                                <p class="text-center"><a href="{{ path('app_frog_menu_index') }}"><i class="fa-solid fa-frog me-1"></i>Menu Grenouilles</a></p>
-                                <!-- Lien vers la page des prix du jour avec une icône et du texte -->
-
-                                <p class="text-center"><a href="{{ path('app_price_dishe_index') }}"><i class="fa-solid fa-money-bill-1-wave me-1"></i>Prix du jour</a></p>
-                                <!-- Lien vers la page du menu du jour avec une icône et du texte -->
-                                <p class="text-center"><a href="{{ path('app_menu_index') }}"><i class="fa-solid fa-utensils me-1"></i>Menu du jour </a></p>
-
-
-
-
-                        </div>
-
-                    </li>
-
-
-
-
-
-            </ul>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
+</div>
